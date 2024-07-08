@@ -61,7 +61,9 @@ onMounted(() => {
     window.addEventListener('resize', () => setTimeout(updateLocations, 0));
     window.addEventListener('scroll', onScroll);
 });
-onUnmounted(() => document.removeEventListener('scroll', onScroll));
+onUnmounted(() => {
+    window.removeEventListener('scroll', onScroll);
+});
 </script>
 
 <template>
@@ -124,7 +126,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
             &:after {
                 border: 1px solid rgba(#000, 0);
                 content: '';
-                display: block;
+                display: flex;
                 position: relative;
                 transition: all 280ms ease-in-out;
                 width: 0;
@@ -166,20 +168,29 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     top: 0;
     display: flex;
     flex-direction: column;
+    max-width: 1080px;
+    margin: 0 auto;
+    transition: all 1s ease; /* Increased duration and used ease */
+
     &:after {
         content: '';
         position: relative;
-        transition: all 250ms ease-in-out;
+        transition: all 1s ease; /* Increased duration and used ease */
         width: 0;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
 
     &.scrolled {
+        width: 96%;
+        max-width: none;
+        margin: 0;
+
         &:after {
             box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
         }
     }
 }
+
 
 #options.hover-enabled div:hover {
     &:before,
