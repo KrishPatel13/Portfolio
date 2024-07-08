@@ -169,21 +169,19 @@ onUnmounted(() => {
     flex-direction: column;
     max-width: 1080px;
     margin: 0 auto;
-    transition: width 1.5s ease, margin 2s ease, background-color 1s ease, backdrop-filter 1s ease; /* Added transitions for background-color and backdrop-filter */
     background-color: white; /* Initial background color */
-    backdrop-filter: none; /* Initial state with no blur */
+    transition: background-color 2s ease, backdrop-filter 2s ease; /* Transition for background and blur */
 
     &:after {
         content: '';
         position: relative;
-        transition: all 1.5s ease;
+        transition: box-shadow 2s ease;
         width: 0;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
 
     &.scrolled {
-        max-width: none;
-        margin: 0;
+        animation: expandNavbar 2s ease forwards;
         background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
         backdrop-filter: blur(10px); /* Glass effect with blur */
 
@@ -193,12 +191,24 @@ onUnmounted(() => {
     }
 }
 
+@keyframes expandNavbar {
+    0% {
+        width: auto;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    100% {
+        width: 100vw; /* Expand to full viewport width */
+        max-width: none;
+        margin: 0;
+    }
+}
+
 #options.hover-enabled div:hover {
     &:before,
     &:after {
         border-color: #ccc;
     }
 }
-
 
 </style>
