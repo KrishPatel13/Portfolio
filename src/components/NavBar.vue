@@ -182,7 +182,6 @@ onUnmounted(() => {
     }
 
     &.scrolled {
-        width: 96%;
         max-width: none;
         margin: 0;
         background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
