@@ -89,12 +89,11 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 @import url('/assets/styles/utils.css');
 .container {
-    width: 96%;
+    width: 97%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: white;
     user-select: none;
 
     #name {
@@ -170,12 +169,14 @@ onUnmounted(() => {
     flex-direction: column;
     max-width: 1080px;
     margin: 0 auto;
-    transition: all 1s ease; /* Increased duration and used ease */
+    transition: width 1.5s ease, margin 2s ease, background-color 1s ease, backdrop-filter 1s ease; /* Added transitions for background-color and backdrop-filter */
+    background-color: white; /* Initial background color */
+    backdrop-filter: none; /* Initial state with no blur */
 
     &:after {
         content: '';
         position: relative;
-        transition: all 1s ease; /* Increased duration and used ease */
+        transition: all 1.5s ease;
         width: 0;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
@@ -184,6 +185,8 @@ onUnmounted(() => {
         width: 96%;
         max-width: none;
         margin: 0;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Glass effect with blur */
 
         &:after {
             box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
@@ -191,11 +194,12 @@ onUnmounted(() => {
     }
 }
 
-
 #options.hover-enabled div:hover {
     &:before,
     &:after {
         border-color: #ccc;
     }
 }
+
+
 </style>
