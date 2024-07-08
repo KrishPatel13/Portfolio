@@ -87,7 +87,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
 <style lang="scss" scoped>
 @import url('/assets/styles/utils.css');
 .container {
-    width: 100%;
+    width: 96%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -164,7 +164,6 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     position: sticky;
     align-items: center;
     top: 0;
-    background-color: white;
     display: flex;
     flex-direction: column;
     &:after {
@@ -178,7 +177,6 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     &.scrolled {
         &:after {
             box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
-            width: 100vw;
         }
     }
 }

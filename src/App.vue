@@ -13,11 +13,13 @@ onMounted(() => AOS.init());
 
 <template>
     <NavBar />
-    <router-view></router-view>
-    <div class="section"><About /></div>
-    <div class="section"><Experience /></div>
-    <div class="section"><Portfolio /></div>
-    <div class="section"><Skills /></div>
+    <div class="main-content">
+        <router-view></router-view>
+        <div class="section"><About /></div>
+        <div class="section"><Experience /></div>
+        <div class="section"><Portfolio /></div>
+        <div class="section"><Skills /></div>
+        </div>
     <Footer />
 </template>
 
@@ -31,13 +33,16 @@ body {
     margin: 0;
 }
 
-#app {
-    max-width: 1000px;
+
+.main-content {
+    align-content: center;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    max-width: 1080px;
 }
+
 
 .section {
     margin-bottom: 10px;
