@@ -170,18 +170,18 @@ onUnmounted(() => {
     max-width: 1080px;
     margin: 0 auto;
     background-color: white; /* Initial background color */
-    transition: background-color 2s ease, backdrop-filter 2s ease; /* Transition for background and blur */
+    transition: background-color 1s ease, backdrop-filter 1s ease; /* Transition for background and blur */
 
     &:after {
         content: '';
         position: relative;
-        transition: box-shadow 2s ease;
+        transition: box-shadow 1s ease;
         width: 0;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
 
     &.scrolled {
-        animation: expandNavbar 2s ease forwards;
+        animation: expandNavbar 1s ease forwards;
         background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
         backdrop-filter: blur(10px); /* Glass effect with blur */
 
