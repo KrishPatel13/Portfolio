@@ -13,7 +13,6 @@
     z-index: -1;
 }
 
-
 .glass-overlay {
     position: fixed;
     top: 0;
@@ -26,12 +25,12 @@
 }
 
 .profile-image {
-        border-radius: 50%;
-        width: 300px;
-        height: 300px;
-        margin: 0 20px 0 0;
-        object-fit: cover;
-        @media (max-width: 716px) {
-            margin: 0 0 10px 0;
-        }
+    /* border-radius: 50%; */
+    width: 300px;
+    height: 300px;
+    margin: 0 20px 0 0;
+    object-fit: cover;
+    @media (max-width: 716px) {
+        margin: 0 0 10px 0;
+    }
 }
