@@ -13,7 +13,7 @@
     z-index: -1;
 }
 
-.glass-overlay {
+/* .glass-overlay {
     position: fixed;
     top: 0;
     right: 0;
@@ -22,7 +22,7 @@
     background: rgba(224,225,219);
     backdrop-filter: blur(2px);
     z-index: -1;
-}
+} */
 
 .profile-image {
     /* border-radius: 50%; */

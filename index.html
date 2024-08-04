@@ -9,8 +9,32 @@
         />
         <title>Krish Patel</title>
     </head>
-    <body>
+    <body class="bg2">
         <div id="app"></div>
+        <div class="radial"></div>
+        <div class="bg"></div>
         <script type="module" src="/src/main.ts"></script>
+        <style type="text/css">
+            .bg {
+                background-image: url(https://creative-portfolio-olive.vercel.app/noisetexture.jpg);
+                inset: 0;
+                position: absolute;
+                opacity: 0.2;
+                mix-blend-mode: soft-light;
+            }
+            .radial {
+                background: radial-gradient(
+                    circle at top center,
+                    rgba(71, 120, 235, 0.5) 0,
+                    transparent 50%,
+                    transparent 100%
+                );
+                inset: 0;
+                position: absolute;
+            }
+            .bg2 {
+                background-color: rgb(15 23 42);
+            }
+        </style>
     </body>
 </html>
