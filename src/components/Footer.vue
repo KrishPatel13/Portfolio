@@ -25,7 +25,7 @@ onMounted(() => {
             >
                 <div>
                     <i class="fa-brands fa-github"></i>
-                    <div class="text">github.com/krish-patel13</div>
+                    <div class="text">github.com/krishpatel13</div>
                 </div>
             </a>
             <a
