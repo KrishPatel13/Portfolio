@@ -35,15 +35,6 @@ const updateLocations = () => {
 const onNavClick = (option: Section) => {
     window.scrollTo({ top: option.location, behavior: 'smooth' });
 };
-const onScroll = () => {
-    scrolled.value = window.scrollY > 0;
-    for (let i = options.length - 1; i >= 0; i--) {
-        if (window.scrollY >= options[i].location! - 1) {
-            active.value = options[i];
-            break;
-        }
-    }
-};
 
 onMounted(() => {
     setTimeout(() => {
@@ -59,10 +50,6 @@ onMounted(() => {
     )
         document.getElementById('options')?.classList.add('hover-enabled');
     window.addEventListener('resize', () => setTimeout(updateLocations, 0));
-    window.addEventListener('scroll', onScroll);
-});
-onUnmounted(() => {
-    window.removeEventListener('scroll', onScroll);
 });
 </script>
 
@@ -167,27 +154,17 @@ onUnmounted(() => {
     top: 0;
     display: flex;
     flex-direction: column;
-    max-width: 1080px;
     margin: 0 auto;
-    background-color: white; /* Initial background color */
     transition: background-color 1s ease, backdrop-filter 1s ease; /* Transition for background and blur */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect with blur */
 
     &:after {
         content: '';
         position: relative;
         transition: box-shadow 1s ease;
         width: 0;
-        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-    }
-
-    &.scrolled {
-        animation: expandNavbar 1s ease forwards;
-        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-        backdrop-filter: blur(10px); /* Glass effect with blur */
-
-        &:after {
-            box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
-        }
+        box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
     }
 }
 
