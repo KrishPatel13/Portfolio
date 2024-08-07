@@ -3,11 +3,6 @@ import Heading from './Heading.vue';
 </script>
 
 <template>
-    <img
-        class="background-image"
-        src="/assets/images/profile11.jpg"
-    />
-
     <div id="about">
         <img
             class="profile-image"
