@@ -12,6 +12,7 @@
     "vue-router": "^4.0.15"
   },
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
