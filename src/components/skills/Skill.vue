@@ -14,156 +14,121 @@ export type SkillGroupData = {
 
 const skillData: SkillGroupData[] = [
     {
-        title: 'Languages',
+        title: 'Programming Languages',
         items: [
-            {
-                name: 'C',
-                level: 82,
-            },
-            {
-                name: 'C#',
-                level: 50,
-            },
-            {
-                name: 'CSS (SCSS)',
-                level: 70,
-            },
-            {
-                name: 'Go',
-                level: 65,
-            },
-            {
-                name: 'Haskell',
-                level: 60,
-            },
-            {
-                name: 'HTML',
-                level: 90,
-            },
-            {
-                name: 'NodeJS',
-                level: 75,
-            },
-            {
-                name: 'Java',
-                level: 85,
-            },
-            {
-                name: 'JavaScript',
-                level: 90,
-            },
-            {
-                name: 'Python',
-                level: 80,
-            },
-            {
-                name: 'TypeScript',
-                level: 95,
-            },
-            {
-                name: 'Verilog',
-                level: 50,
-            },
+            { name: 'C++', level: 85 },
+            { name: 'Java', level: 80 },
+            { name: 'C', level: 75 },
+            { name: 'Python', level: 90 },
+            { name: 'JavaScript', level: 85 },
+            { name: 'TypeScript', level: 85 },
+            { name: 'PHP', level: 70 },
+            { name: 'Assembly', level: 65 },
+            { name: 'Racket', level: 65 },
+            { name: 'Haskell', level: 65 },
         ],
     },
-
     {
-        title: 'Frameworks',
+        title: 'JavaScript Frameworks/Libraries',
         items: [
-            {
-                name: 'AngularJS',
-                level: 75,
-            },
-            {
-                name: 'Express',
-                level: 90,
-            },
-            {
-                name: 'Flask',
-                level: 60,
-            },
-            {
-                name: 'Jasmine',
-                level: 65,
-            },
-            {
-                name: 'Jest',
-                level: 60,
-            },
-            {
-                name: 'JUnit',
-                level: 65,
-            },
-            {
-                name: 'PyTest',
-                level: 55,
-            },
-            {
-                name: 'ReactJS',
-                level: 85,
-            },
-            {
-                name: 'Spring Boot',
-                level: 75,
-            },
-            {
-                name: 'Vue.js',
-                level: 70,
-            },
+            { name: 'React', level: 85 },
+            { name: 'Node.js', level: 80 },
+            { name: 'Vue.js', level: 75 },
+            { name: 'Express.js', level: 85 },
+            { name: 'Next.js', level: 70 },
+            { name: 'jQuery', level: 60 },
+            { name: 'Ajax', level: 70 },
+            { name: 'REST API', level: 80 },
         ],
     },
     {
         title: 'Databases',
         items: [
-            {
-                name: 'MongoDB',
-                level: 80,
-            },
-            {
-                name: 'SQL (PostGres)',
-                level: 70,
-            },
-            {
-                name: 'Redis',
-                level: 65,
-            },
+            { name: 'MongoDB', level: 80 },
+            { name: 'PostgreSQL', level: 75 },
+            { name: 'Redis', level: 70 },
+            { name: 'MySQL', level: 70 },
+            { name: 'SQLite', level: 65 },
+            { name: 'Neo4j', level: 60 },
+            { name: 'GaussDB', level: 55 },
         ],
     },
     {
-        title: 'Others',
+        title: 'AI/ML',
         items: [
-            {
-                name: 'Bash (Unix)',
-                level: 75,
-            },
-            {
-                name: 'Bootstrap',
-                level: 60,
-            },
-            {
-                name: 'Docker',
-                level: 70,
-            },
-            {
-                name: 'Git',
-                level: 85,
-            },
-            {
-                name: 'GitHub Actions',
-                level: 75,
-            },
-            {
-                name: 'GraphQL',
-                level: 70,
-            },
-            {
-                name: 'JQuery',
-                level: 50,
-            },
-            {
-                name: 'Terraform',
-                level: 55
-            }
+            { name: 'Deep Learning', level: 85 },
+            { name: 'PyTorch', level: 80 },
+            { name: 'TensorFlow', level: 80 },
+            { name: 'Hugging Face', level: 75 },
+            { name: 'Scikit-learn', level: 75 },
+            { name: 'Keras', level: 70 },
+            { name: 'OpenCV', level: 70 },
+            { name: 'Pandas', level: 85 },
+            { name: 'Numpy', level: 85 },
+            { name: 'SpaCy', level: 75 },
+            { name: 'OpenAI', level: 80 },
+        ],
+    },
+    {
+        title: 'Scripting Languages',
+        items: [
+            { name: 'Bash', level: 75 },
+            { name: 'Shell', level: 70 },
+            { name: 'PS1', level: 65 },
+            { name: 'Groovy', level: 60 },
+        ],
+    },
+    {
+        title: 'Version Control',
+        items: [
+            { name: 'Git', level: 90 },
+            { name: 'GitHub', level: 85 },
+            { name: 'GitLab', level: 80 },
+        ],
+    },
+    {
+        title: 'Code/Text Editors',
+        items: [
+            { name: 'Vim', level: 80 },
+            { name: 'Notepad', level: 70 },
+            { name: 'VS Code', level: 90 },
+        ],
+    },
+    {
+        title: 'DevOps Tools',
+        items: [
+            { name: 'Docker', level: 85 },
+            { name: 'Jenkins', level: 80 },
+            { name: 'Azure', level: 75 },
+            { name: 'Jira', level: 70 },
+            { name: 'Terraform', level: 65 },
+            { name: 'Kubernetes', level: 70 },
+            { name: 'Selenium', level: 75 },
+            { name: 'Slack', level: 85 },
+            { name: 'CI/CD', level: 80 },
+        ],
+    },
+    {
+        title: 'Markup/Modeling Languages',
+        items: [
+            { name: 'HTML', level: 85 },
+            { name: 'XML', level: 75 },
+            { name: 'CSS', level: 80 },
+            { name: 'TailWind', level: 75 },
+            { name: 'LaTeX', level: 70 },
+            { name: 'Markdown', level: 85 },
+            { name: 'SSML', level: 65 },
+        ],
+    },
+    {
+        title: 'Operating Systems',
+        items: [
+            { name: 'Linux', level: 85 },
+            { name: 'Unix', level: 75 },
+            { name: 'Windows', level: 80 },
+            { name: 'macOS', level: 70 },
+            { name: 'Android', level: 75 },
+            { name: 'CentOS', level: 65 },
         ],
     },
 ];
