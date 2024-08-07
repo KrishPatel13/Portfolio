@@ -1,0 +1,9 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "include": ["vite.config.*"],
+  "compilerOptions": {
+    "lib": ["ES2020", "ES2020.BigInt"],
+    "composite": true,
+    "types": ["node"]
+  }
+}

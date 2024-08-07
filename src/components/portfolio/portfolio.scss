@@ -1,0 +1,139 @@
+// credits: https://codepen.io/dbenmore/pen/eYpYPEL
+$base-grid: 8px;
+$colour-body-background: #fff;
+$colour-background: #000;
+$colour-background-folded: #000;
+$colour-background-stripes: rgba(0, 0, 0, 1);
+$colour-text: #fff;
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.portfolio-card {
+    background: $colour-body-background;
+    margin: 25px;
+}
+
+#porfolio-cards {
+    margin: calc($base-grid * 2) auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-card {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    animation-name: animateIn;
+    animation-duration: 0.35s;
+    animation-delay: calc(var(--animation-order) * 100ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+.portfolio-card:before {
+    content: '';
+    position: absolute;
+    top: calc($base-grid * -2);
+    left: calc($base-grid * -2);
+    border: 2px dashed $colour-background;
+    background-image: repeating-linear-gradient(
+        -24deg,
+        transparent,
+        transparent 4px,
+        $colour-background-stripes 0,
+        $colour-background-stripes 5px
+    );
+    z-index: -1;
+}
+
+.portfolio-card,
+.portfolio-card:before {
+    width: calc($base-grid * 35);
+    height: calc($base-grid * 35);
+}
+
+.link {
+    background-color: $colour-body-background;
+    border: 2px solid $colour-background;
+    display: block;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.link:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: calc($base-grid * 3);
+    width: calc($base-grid * 2);
+    height: calc($base-grid * 2);
+    margin-top: calc($base-grid * -1);
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%, 0 0);
+    -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%, 0 0);
+    background-color: $colour-background;
+    opacity: 0;
+    transition: opacity 0.5s ease-in, transform 0.3s ease-in-out 0ms;
+}
+
+.content {
+    background-color: $colour-background;
+    color: $colour-text;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: calc($base-grid * 2);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $colour-background;
+}
+
+.content-lhs {
+    clip-path: polygon(0 0, 51% 0, 51% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 51% 0, 51% 100%, 0 100%);
+}
+
+.content-rhs {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    transition: transform 0.5s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.title {
+    font-size: calc($base-grid * 3);
+    line-height: 1.125;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.description {
+    margin-top: 5px;
+}
+
+.footer {
+    margin-top: auto;
+    font-size: calc($base-grid * 2);
+    line-height: calc($base-grid * 2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.link:hover .content-rhs {
+    background-color: $colour-background-folded;
+    transform: rotateY(-50deg);
+}
+
+.link:hover:after {
+    opacity: 1;
+    transform: translateX(calc($base-grid * 1.5));
+    transition: opacity 0.5s ease-in, transform 0.3s ease-in-out 0.25s;
+}

@@ -1,0 +1,204 @@
+$border: #000;
+
+#exp-timeline {
+    padding-top: 10px;
+}
+
+#exp-timeline {
+    position: relative;
+    &::before {
+        content: '';
+        background: #000;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 6px;
+    }
+}
+
+.timeline-item {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
+
+    &:nth-child(even) {
+        .timeline-content {
+            float: right;
+
+            &::after {
+                content: '';
+                position: absolute;
+                border-style: solid;
+                width: 0;
+                height: 0;
+                top: 23px;
+                left: -15px;
+                border-width: 20px 25px 20px 0;
+                border-color: transparent $border transparent transparent;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.timeline-content {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(50% - 35px);
+    border: 2px solid black;
+
+    .header {
+        background-color: black;
+        color: white;
+        display: flex;
+        padding: 10px;
+
+        .logo {
+            padding: 5px;
+            align-self: center;
+            background: rgba(255, 255, 255, 0.17);
+            height: min-content;
+            width: min-content;
+
+            img {
+                height: 60px;
+                width: 60px;
+                display: block;
+            }
+        }
+
+        .position-info {
+            align-self: center;
+            overflow: hidden;
+            margin-left: 10px;
+
+            .position-title {
+                @media (min-width: 800px) {
+                    font-size: 18px;
+                }
+            }
+
+            .company,
+            .position-date {
+                font-size: 16px;
+            }
+
+            .company {
+                letter-spacing: 0.3px;
+            }
+
+            .position-date {
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .body {
+        margin: 0;
+        padding: 0 5px 0 30px;
+        li {
+            font-size: 20px;
+            margin: 5px 0;
+            line-height: 16px;
+
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 23px;
+        right: -15px;
+        border-width: 20px 0 20px 25px;
+        border-color: transparent transparent transparent $border;
+        z-index: -1;
+    }
+}
+
+.timeline-bullet {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    background-image: repeating-linear-gradient(
+        -24deg,
+        transparent,
+        transparent 4px,
+        black 0,
+        black 5px
+    );
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 33px;
+    margin-left: -12px;
+    border: 2px solid black;
+
+    &::before,
+    &::after {
+        content: '';
+        height: 10px;
+        width: 10px;
+        background: white;
+        z-index: 15;
+    }
+}
+
+@media screen and (max-width: 716px) {
+    #exp-timeline {
+        &::before {
+            left: 15px;
+        }
+
+        .timeline-bullet {
+            left: 15px;
+        }
+
+        .timeline-content {
+            max-width: 100%;
+            width: auto;
+            margin-left: 50px;
+        }
+
+        .timeline-item {
+            &:nth-child(even) {
+                .timeline-content {
+                    float: none;
+                }
+            }
+
+            &:nth-child(odd) {
+                .timeline-content {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        border-style: solid;
+                        width: 0;
+                        height: 0;
+                        top: 23px;
+                        left: -15px;
+                        border-width: 20px 25px 20px 0;
+                        border-color: transparent $border transparent
+                            transparent;
+                    }
+                }
+            }
+        }
+    }
+}
