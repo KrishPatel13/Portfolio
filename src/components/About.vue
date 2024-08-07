@@ -22,7 +22,7 @@ import Heading from './Heading.vue';
 
                 Beyond industry experience, I have a solid background in academia as a <strong>Teaching Assistant</strong> for various <strong>computer science</strong> and <strong>mathematics</strong> courses at the University of Toronto. This role has allowed me to refine my <strong>technical expertise</strong> and develop strong <strong>teaching</strong> and <strong>mentoring skills</strong>.
 
-                Driven by a passion for <strong>Artificial Intelligence</strong> and its transformative potential, I am eager to pursue a <strong>master's program</strong> to deepen my knowledge and contribute to <strong>innovative advancements</strong> in this rapidly evolving field.
+                Driven by a passion for <strong>Artificial Intelligence</strong> and its transformative potential, I am eager to deepen my knowledge and contribute to <strong>innovative advancements</strong> in this rapidly evolving field.
             </div>
         </div>
     </div>
