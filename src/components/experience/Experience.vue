@@ -12,7 +12,7 @@ export type Experience = {
 
 const professionalExperiences: Experience[] = [
     {
-        logo: 'huawei.jpg',
+        logo: 'huawei.png',
         organization: 'Huawei Technologies Canada Inc.',
         position: 'Software Engineer Intern Co-op – Distributed Database Lab R&D',
         date: 'May 2024 – April 2025',
@@ -24,7 +24,7 @@ const professionalExperiences: Experience[] = [
         ],
     },
     {
-        logo: 'mldsai.jpg',
+        logo: 'mldsai.png',
         organization: 'MLDSAI Inc.',
         position: 'Machine Learning Engineer Intern',
         date: 'May 2023 – August 2023',
@@ -35,7 +35,7 @@ const professionalExperiences: Experience[] = [
         ],
     },
     {
-        logo: 'dotsandcoms.jpg',
+        logo: 'dotsandcoms.jpeg',
         organization: 'Dots & Coms',
         position: 'Software Engineering Intern – Android',
         date: 'May 2022 – August 2022',
@@ -62,7 +62,7 @@ const teachingExperiences: Experience[] = [
         ],
     },
     {
-        logo: 'ultimatecoders.jpg',
+        logo: 'ultimatecoders.png',
         organization: 'Ultimate Coders',
         position: 'Coding and Math Tutor',
         date: 'August 2022 – January 2023',
@@ -76,7 +76,7 @@ const teachingExperiences: Experience[] = [
 
 const researchExperiences: Experience[] = [
     {
-        logo: 'voiceex.jpg',
+        logo: 'voiceex.png',
         organization: 'VoiceEx – Interactive Systems Supporting Computing Education',
         position: 'Research Assistant',
         date: 'January 2024 – August 2024',
