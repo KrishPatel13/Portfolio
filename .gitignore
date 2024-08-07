@@ -142,6 +142,7 @@ node_modules
 .DS_Store
 dist
 dist-ssr
+build
 coverage
 *.local
 
@@ -161,3 +162,40 @@ coverage
 
 #misc
 package-lock.json
+
+# Node modules and package lock file
+/node_modules/
+/package-lock.json
+
+# Production build output
+/dist/
+/build/
+
+# Local Netlify directory
+/.netlify/
+
+# VSCode settings
+/.vscode/
+
+# Cypress screenshots and videos
+/cypress/screenshots/
+/cypress/videos/
+
+# Coverage reports
+/coverage/
+
+# Other build artifacts
+*.log
+*.lock
+*.env
+
+# Ignore specific files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE specific
+.idea/
+.DS_Store
+*.iml
