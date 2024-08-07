@@ -10,44 +10,25 @@ export type Project = {
 };
 const projects = [
     {
-        title: 'Hexagon Security Platform',
-        tools: ['React (TS)', 'NodeJS', 'GraphQL', 'MongoDB'],
-        date: 'Winter 2022',
-        link: 'https://github.com/tahmid-haque/hexagon-security',
-        description:
-            'A fully secure platform for storing sensitive information on the web. Includes credential management, note storage and autofilling via a Chrome extension',
+        title: 'Snowfall Saga (Multiplayer Web Game)',
+        tools: ['HTML5', 'CSS3', 'JavaScript', 'Flask', 'WebSocket', 'Docker'],
+        date: 'Summer 2023',
+        link: 'https://github.com/krishpatel13/Snowfall-Saga',
+        description: 'Developed a real-time multiplayer web game...',
     },
     {
-        title: 'Bytes Restaurant Rewards',
-        tools: ['JS', 'JQuery', 'Python (Flask)', 'MongoDB'],
-        date: 'Summer 2020',
-        link: 'https://github.com/tahmid-haque/bytes-rewards',
-        description:
-            'A restaurant-oriented rewards platform with 2 web apps to support reward curation and client management alongside a static website to document development progress',
+        title: 'DataGuard (PII/PHI Data Anonymization Tool)',
+        tools: ['Python', 'Microsoft Presidio', 'spaCy', 'NLP'],
+        date: 'Winter 2023',
+        link: 'https://github.com/krishpatel13/DataGuard',
+        description: 'Developed Scrub, a Python-based tool to anonymize PII and PHI...',
     },
     {
-        title: 'YelpCamp',
-        tools: ['Bootstrap', 'NodeJS (Express)', 'MongoDB'],
-        date: 'Summer 2020',
-        link: 'https://github.com/tahmid-haque/YelpCamp',
-        description:
-            'A simple web app that supports reviewing campsites across the world. The first website I developed and revamped as part of a web development course',
-    },
-    {
-        title: 'DE2 Connect 4',
-        tools: ['Verilog'],
-        date: 'Summer 2019',
-        link: 'https://github.com/tahmid-haque/DE2_Connect-4',
-        description:
-            'An implementation of the classic 2-player Connect 4 game, designed for FPGAs and tested on a DE2 board',
-    },
-    {
-        title: 'Web Portfolio (This)',
-        tools: ['Vue.js (TS)'],
-        date: 'Summer 2022',
-        link: 'https://github.com/tahmid-haque/portfolio',
-        description:
-            'My personal website and portfolio. Designed to showcase my experiences and profile to users of all devices',
+        title: 'Chronos (Time Management System)',
+        tools: ['Java', 'SOLID Principles', 'Scrum', 'Agile', 'UML Diagrams'],
+        date: 'Fall 2022',
+        link: 'https://github.com/krishpatel13/Chronos',
+        description: 'Built a web-based Time Management System...',
     },
 ];
 </script>
