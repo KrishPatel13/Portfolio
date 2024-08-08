@@ -5,6 +5,7 @@ import About from './components/About.vue';
 import Portfolio from './components/portfolio/Portfolio.vue';
 import Experience from './components/experience/Experience.vue';
 import Skills from './components/skills/Skill.vue';
+import Confetti from './components/Confetti.vue';
 import AOS from 'aos';
 import { onMounted } from 'vue';
 
@@ -12,15 +13,25 @@ onMounted(() => AOS.init());
 </script>
 
 <template>
-    <NavBar />
-    <div class="main-content">
-        <router-view></router-view>
-        <div class="section"><About /></div>
-        <div class="section"><Experience /></div>
-        <div class="section"><Portfolio /></div>
-        <div class="section"><Skills /></div>
+    <Confetti>
+        <NavBar />
+        <div class="main-content">
+            <router-view></router-view>
+            <div class="section">
+                <About />
+            </div>
+            <div class="section">
+                <Experience />
+            </div>
+            <div class="section">
+                <Portfolio />
+            </div>
+            <div class="section">
+                <Skills />
+            </div>
         </div>
-    <Footer />
+        <Footer />
+    </Confetti>
 </template>
 
 <style lang="scss">
@@ -31,6 +42,7 @@ body {
     font-weight: 500;
     font-size: 15px;
     margin: 0;
+    cursor: url('assets/cursor/cursor7.png'), auto;
 }
 
 

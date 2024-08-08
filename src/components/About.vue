@@ -7,7 +7,7 @@ import Heading from './Heading.vue';
         <img
             class="profile-image"
             src="/assets/images/profile.png"
-            alt="krish's profile image"
+            alt="Krish Patel - Software Engineer Profile Picture" />"
             data-aos="zoom-in"
         />
 
