@@ -1,19 +1,46 @@
 {
     "name": "Krish Patel's Portfolio",
-    "short_name": "Krish Patel's Portfolio",
+    "short_name": "Krish Portfolio",
+    "theme_color": "#e0e1db",
+    "background_color": "#e0e1db",
+    "display": "standalone",
+    "id": "/",
+    "start_url": "/",
     "icons": [
         {
-            "src": "android-chrome-192x192.png",
+            "src": "assets/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "android-chrome-512x512.png",
+            "src": "assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "assets/favicon/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/favicon/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/favicon/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/favicon/mstile-150x150.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/favicon/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
         }
-    ],
-    "theme_color": "#e0e1db",
-    "background_color": "#e0e1db",
-    "display": "standalone"
+    ]
 }
