@@ -42,6 +42,7 @@ body {
     font-weight: 500;
     font-size: 15px;
     margin: 0;
+    cursor: url('assets/cursor/cursor7.png'), auto;
 }
 
 

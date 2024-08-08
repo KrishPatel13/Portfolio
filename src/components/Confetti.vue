@@ -16,17 +16,14 @@ const triggerConfetti = (event) => {
 
 	// Trigger the custom-shaped confetti at the click position
 	confetti({
-		particleCount: 3,
+		particleCount: 5,
 		spread: 360,
 		startVelocity: 5, 
 		origin: { x, y },
 		shapes: [pointedOvalShape],
 		scalar: 2,
+		colors: ["#576444", "#485b7c", "#9fa6af"],
 	});
-
-	setTimeout(() => {
-		confetti.reset();
-	}, 1000);
 };
 </script>
 
