@@ -1,4 +1,4 @@
-# portfolio
+# my (Krish's) Portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/abae835b-ad45-4c05-9325-b045a9e5cdfb/deploy-status)](https://app.netlify.com/sites/krish13patel/deploys)
 
