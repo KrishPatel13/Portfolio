@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'selector',
   theme: {
     extend: {},
@@ -9,4 +8,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+  content: [
+    './src/**/*.{js,jsx,ts,tsx,vue}', // Combined patterns for JS, JSX, TS, TSX, and Vue files
+    './public/index.html',
+  ],
+};

@@ -74,6 +74,7 @@ $border: #000;
                 height: 60px;
                 width: 60px;
                 display: block;
+                cursor: grab;
             }
         }
 
@@ -81,6 +82,7 @@ $border: #000;
             align-self: center;
             overflow: hidden;
             margin-left: 10px;
+            cursor: text;
 
             .position-title {
                 @media (min-width: 800px) {
@@ -107,6 +109,8 @@ $border: #000;
     .body {
         margin: 0;
         padding: 0 5px 0 30px;
+        cursor: text;
+
         li {
             font-size: 20px;
             margin: 5px 0;

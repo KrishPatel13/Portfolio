@@ -59,6 +59,7 @@ $height: 25px;
     text-align: center;
     width: $minWidth;
     background-color: black;
+    cursor: text;
 }
 
 .skill-level-wrapper {

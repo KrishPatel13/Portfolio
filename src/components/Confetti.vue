@@ -22,7 +22,7 @@ const triggerConfetti = (event) => {
 		origin: { x, y },
 		shapes: [pointedOvalShape],
 		scalar: 2,
-		colors: ["#576444", "#485b7c", "#9fa6af"],
+		colors: ["#576444", "#424c27", "#9fa6af", "#0F2D73"],
 	});
 };
 </script>

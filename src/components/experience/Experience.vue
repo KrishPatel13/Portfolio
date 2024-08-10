@@ -114,61 +114,6 @@ const otherExperiences: Experience[] = [
         ],
     },
 ];
-
-// // Computes timeline shape using position deltas across experience items and bullets
-// const arrangeTimeline = () => {
-//     const ITEM_OFFSET = 20;
-//     const expComponents = document.querySelectorAll(
-//         '.timeline-item'
-//     ) as any as HTMLElement[];
-//     const isDisabled =
-//         (window.innerWidth ||
-//             document.documentElement.clientWidth ||
-//             document.body.clientWidth) <= 716;
-//     for (let i = 1; i < expComponents.length; i++) {
-//         expComponents[i].style.marginTop = 'unset';
-//         if (isDisabled) continue;
-
-//         let directUpperExpPos = -Infinity;
-//         let lowerDelta = Infinity;
-
-//         // get upper circle position
-//         const directUpperBulletRect =
-//             expComponents[i - 1].children[0].getBoundingClientRect();
-//         const directUpperBulletPos =
-//             directUpperBulletRect.top + directUpperBulletRect.height;
-
-//         // get upper box position
-//         if (i > 1) {
-//             const directUpperExpRect =
-//                 expComponents[i - 2].getBoundingClientRect();
-//             directUpperExpPos =
-//                 directUpperExpRect.top + directUpperExpRect.height;
-//         }
-
-//         // get upper delta
-//         const currentExpPos = expComponents[i].getBoundingClientRect().top;
-//         const upperDelta =
-//             currentExpPos - Math.max(directUpperBulletPos, directUpperExpPos);
-
-//         // get lower delta
-//         const adjUpperExpRect = expComponents[i - 1].getBoundingClientRect();
-//         const adjUpperExpPos = adjUpperExpRect.top + adjUpperExpRect.height;
-//         const lowerItem =
-//             i < expComponents.length - 1
-//                 ? expComponents[i + 1]
-//                 : document.getElementById('portfolio');
-//         lowerDelta = lowerItem!.getBoundingClientRect().top - adjUpperExpPos;
-
-//         const finalDelta = -Math.min(upperDelta, lowerDelta) + ITEM_OFFSET;
-
-//         expComponents[i].style.marginTop = `${finalDelta}px`;
-//     }
-// };
-// onMounted(() => {
-//     arrangeTimeline();
-//     window.addEventListener('resize', arrangeTimeline);
-// });
 </script>
 
 <template>

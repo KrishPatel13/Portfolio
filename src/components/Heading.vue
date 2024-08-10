@@ -11,4 +11,8 @@ const props = defineProps<{ subtleText: string; emphasizedText: string }>();
 
 <style lang="scss" scoped>
 @import url('/assets/styles/utils.css');
+
+.heading {
+    cursor: text;
+}
 </style>
