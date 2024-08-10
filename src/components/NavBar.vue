@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from '@vue/reactivity';
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted } from 'vue';
 type Section = {
     name: string;
     selectorId: string;

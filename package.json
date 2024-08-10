@@ -10,7 +10,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "^3.0.1",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.4.3"
   },
   "scripts": {
     "start": "npm run dev",
