@@ -5,7 +5,9 @@
   "dependencies": {
     "aos": "^2.3.4",
     "canvas-confetti": "^1.9.3",
+    "cssnano": "^7.0.5",
     "framer-motion": "^11.2.12",
+    "postcss": "^8.4.41",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^3.0.1",

@@ -3,26 +3,43 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import viteCompression from 'vite-plugin-compression';
-import purgecss from 'vite-plugin-purgecss';
+import cssnano from 'cssnano';
 
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    viteCompression(),
-    purgecss({
-      content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx', './src/**/*.tsx'], // specify the paths to your files
-      safelist: ['html', 'body'], // add any classes that should not be removed
-    })
+    viteCompression()
   ],
+  css: {
+    postcss: {
+      plugins: [
+        cssnano({
+          preset: 'default',
+        }),
+      ],
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  build: {
+    minify: 'terser',  // Use Terser for minification
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+      output: {
+        comments: false,  // Remove comments from the output
+      },
+    },
+  },
   define: {
-    '__VUE_OPTIONS_API__': true, // or false if you're not using Options API
-    '__VUE_PROD_DEVTOOLS__': false, // or true if you want to enable Vue Devtools in production
-    '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': false, // or true if you need this feature
+    '__VUE_OPTIONS_API__': true,
+    '__VUE_PROD_DEVTOOLS__': false,
+    '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': false,
   }
 });
