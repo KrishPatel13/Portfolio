@@ -140,6 +140,7 @@ const skillData: SkillGroupData[] = [
         <div id="skillGroups">
             <SkillGroup
                 v-for="skillGroup of skillData"
+                :key="skillGroup.title"
                 class="group"
                 :skill-group="skillGroup"
             />

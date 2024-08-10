@@ -35,6 +35,7 @@ onMounted(() => AOS.init());
 </template>
 
 <style lang="scss">
+@import url('/assets/styles/utils.css');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&family=Roboto+Slab:wght@300;400;800&display=swap');
 body {
     font-family: 'Raleway', 'Roboto Slab', 'Segoe UI', Tahoma, Geneva, Verdana,
@@ -42,7 +43,7 @@ body {
     font-weight: 500;
     font-size: 15px;
     margin: 0;
-    cursor: url('/assets/cursor/cursor7.png'), auto;
+    cursor: url('/assets/cursor/custom-default-cursor.png'), auto;
 }
 
 

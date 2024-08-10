@@ -66,14 +66,16 @@ $border: #000;
         .logo {
             padding: 5px;
             align-self: center;
-            background: rgba(255, 255, 255, 0.17);
+            background: rgba(124, 68, 68, 0.17);
             height: min-content;
             width: min-content;
 
             img {
-                height: 60px;
                 width: 60px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
                 display: block;
+                cursor: grab;
             }
         }
 
@@ -81,6 +83,7 @@ $border: #000;
             align-self: center;
             overflow: hidden;
             margin-left: 10px;
+            cursor: text;
 
             .position-title {
                 @media (min-width: 800px) {
@@ -107,6 +110,8 @@ $border: #000;
     .body {
         margin: 0;
         padding: 0 5px 0 30px;
+        cursor: text;
+
         li {
             font-size: 20px;
             margin: 5px 0;
