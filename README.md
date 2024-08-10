@@ -42,6 +42,7 @@ This portfolio is an ongoing project aimed at not only showcasing my past work b
 
 - **Enhancing User Interface (UI):** Continuously improving the design to align with modern standards.
 - **SEO Optimization:** Implementing strategies to increase visibility in search engine results.
+![image](https://github.com/user-attachments/assets/848c44bd-06c6-4b4d-8c2f-ad0c0028c4ea)
 - **Responsive Design:** Ensuring a consistent experience across all devices.
 - **Performance Optimization:** Regularly improving loading times and overall performance.
 - **Adhering to Software Engineering Practices:** Following the Software Development Life Cycle (SDLC) and applying Software Product Management principles for high-quality delivery.
