@@ -28,7 +28,7 @@ const toggleVisibility = () => {
 </script>
 
 <template>
-        <div class="experience-section-container heading roboto light" data-aos="fade-right">
+        <div class="experience-container heading roboto light" data-aos="fade-right">
                 <Heading :subtle-text="subtleText" :emphasized-text="emphasizedText" />
                 <button class="toggle-btn" @click="toggleVisibility(section)">
                         <svg class="toggle-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
@@ -54,7 +54,6 @@ const toggleVisibility = () => {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10px;
-
         h2 {
                 margin: 0;
                 font-size: 24px;
@@ -69,7 +68,6 @@ const toggleVisibility = () => {
                 font-size: 16px;
                 cursor: pointer;
                 color: #000;
-
                 svg {
                         margin-right: 5px;
                 }
