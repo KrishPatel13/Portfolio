@@ -35,9 +35,11 @@ const projects = [
 
 <template>
     <div id="portfolio">
-        <Heading subtle-text="My" emphasized-text="Portfolio" />
+        <div class="heading roboto light" data-aos="fade-right">
+            <Heading subtle-text="My" emphasized-text="Portfolio" />
+        </div>
         <div id="porfolio-cards">
-            <PortfolioCard v-for="project in projects" :project="project" />
+            <PortfolioCard v-for="project in projects" :project="project" :key="project.title" />
         </div>
     </div>
 </template>
