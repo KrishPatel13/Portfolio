@@ -17,3 +17,16 @@
     width: 100%;
     border-bottom: 1px solid rgba(191, 191, 191, 0.4);
 }
+
+.glass-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(224, 225, 219);
+    -webkit-backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}

@@ -11,8 +11,6 @@ import Heading from './Heading.vue';
             data-aos="zoom-in"
         />
 
-        <div class="glass-overlay"></div>
-
         <div>
             <Heading subtle-text="About" emphasized-text="Me" />
             <div class="description" data-aos="zoom-out-up">

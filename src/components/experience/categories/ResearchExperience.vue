@@ -1,9 +1,9 @@
 <template>
         <Confetti>
                 <TeachingNavBar />
-                <div class="main-content">
-                        <div class="section" id="teaching">
-                                <Heading subtle-text=" Teaching" emphasized-text="Experience" />
+                <div id="teaching" class="main-content">
+                        <div class="section" id="">
+                                <Heading subtle-text="Teaching" emphasized-text="Experience" />
                                 <ExperienceGroup :experiences="teachingExperiences" />
                         </div>
                 </div>
@@ -24,7 +24,7 @@ export type Experience = {
         info: string[];
 };
 
-const teachingExperiences: Experience[] = [
+const researchExperiences: Experience[] = [
         {
                 logo: 'utoronto.jpg',
                 organization: 'University of Toronto',

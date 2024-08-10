@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from '@vue/reactivity';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 type Section = {
     name: string;
     selectorId: string;
@@ -35,6 +35,15 @@ const updateLocations = () => {
 const onNavClick = (option: Section) => {
     window.scrollTo({ top: option.location, behavior: 'smooth' });
 };
+const onScroll = () => {
+    scrolled.value = window.scrollY > 0;
+    for (let i = options.length - 1; i >= 0; i--) {
+        if (window.scrollY >= options[i].location! - 1) {
+            active.value = options[i];
+            break;
+        }
+    }
+};
 
 onMounted(() => {
     setTimeout(() => {
@@ -50,7 +59,9 @@ onMounted(() => {
     )
         document.getElementById('options')?.classList.add('hover-enabled');
     window.addEventListener('resize', () => setTimeout(updateLocations, 0));
+    window.addEventListener('scroll', onScroll);
 });
+onUnmounted(() => document.removeEventListener('scroll', onScroll));
 </script>
 
 <template>

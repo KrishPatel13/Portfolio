@@ -7,9 +7,11 @@ onMounted(() => AOS.init());
 
 <template>
     <router-view />
+    <div class="glass-overlay"></div>
 </template>
 
 <style lang="scss">
+@import url('/assets/styles/utils.css');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&family=Roboto+Slab:wght@300;400;800&display=swap');
 
 body {
