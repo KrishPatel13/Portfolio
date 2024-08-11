@@ -1,8 +1,8 @@
 <template>
   <div id="splash-screen" :class="{ 'slide-up': !isVisible }">
     <div id="loading-content">
-      <h1 id="name">Krish Patel</h1>
-      <div class="spinner"></div>
+      <img src="/assets/typing_krish_patel_intro.gif" alt="Typing Intro" class="intro-gif" @load="onGifLoaded"/>
+      <h1 v-if="showWelcome" class="welcome-message">Welcome to my Portfolio Website</h1>
     </div>
   </div>
 </template>
@@ -11,18 +11,26 @@
 import { ref, onMounted } from 'vue';
 
 const isVisible = ref(true);
+const showWelcome = ref(false);
+
+const onGifLoaded = () => {
+  setTimeout(() => {
+    showWelcome.value = true;
+    setTimeout(() => {
+      isVisible.value = false;
+    }, 3000); // 3 seconds for welcome message
+  }, 5000); // 5 seconds for GIF duration
+};
 
 onMounted(() => {
-  setTimeout(() => {
-    isVisible.value = false;
-  }, 3000); // 3 seconds for loading
+  // Additional logic if needed
 });
 </script>
 
 <style scoped lang="scss">
 /* Full-screen splash screen */
 #splash-screen {
-  background-color: #ffffff;
+  background-color: #0d1117;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,30 +54,30 @@ onMounted(() => {
   text-align: center;
 }
 
-/* Your name */
-#name {
+/* Intro GIF */
+.intro-gif {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Welcome message */
+.welcome-message {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
-  color: #333333;
-  margin-bottom: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
 }
 
-/* Minimalist spinner */
-.spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #333333;
-  border-top: 4px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    opacity: 1;
   }
 }
 </style>
