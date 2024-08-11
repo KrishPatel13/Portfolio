@@ -14,23 +14,22 @@ onMounted(() => AOS.init());
 
 <template>
     <Confetti>
-        <NavBar />
-        <div class="main-content">
-            <router-view></router-view>
-            <div class="section">
-                <About />
-            </div>
-            <div class="section">
-                <Experience />
-            </div>
-            <div class="section">
-                <Portfolio />
-            </div>
-            <div class="section">
-                <Skills />
-            </div>
+      <NavBar />
+      <div class="main-content">
+        <div class="section" id="about">
+          <About />
         </div>
-        <Footer />
+        <div class="section" id="experience">
+          <Experience />
+        </div>
+        <div class="section" id="portfolio">
+          <Portfolio />
+        </div>
+        <div class="section" id="skills">
+          <Skills />
+        </div>
+      </div>
+      <Footer />
     </Confetti>
 </template>
 
@@ -44,6 +43,7 @@ body {
     font-size: 15px;
     margin: 0;
     cursor: url('/assets/cursor/custom-default-cursor.png'), auto;
+    background-color: #e7e5dd;
 }
 
 
@@ -58,6 +58,7 @@ body {
 
 
 .section {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
 }
 </style>

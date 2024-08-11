@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import Heading from '../Heading.vue';
-import ExperienceGroup from './ExperienceGroup.vue';
+import ExperienceSection from './ExperienceSection.vue';
 
 export type Experience = {
     logo: string;
@@ -116,22 +115,49 @@ const otherExperiences: Experience[] = [
 ];
 </script>
 
+
 <template>
     <div id="experience">
-        <Heading subtle-text="Professional" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="professionalExperiences" />
-
-        <Heading subtle-text="Teaching" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="teachingExperiences" />
-
-        <Heading subtle-text="Research" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="researchExperiences" />
-
-        <Heading subtle-text="Other" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="otherExperiences" />
+        <Heading class="roboto light heading" subtle-text="My" emphasized-text="Experiences" />
+    
+        <ExperienceSection subtle-text="Professional" emphasized-text="Experience" section="professional"
+            :experiences="professionalExperiences" />
+        <ExperienceSection subtle-text="Teaching" emphasized-text="Experience" section="teaching" :experiences="teachingExperiences" />
+        <ExperienceSection subtle-text="Research" emphasized-text="Experience" section="research" :experiences="researchExperiences" />
+        <ExperienceSection subtle-text="Other" emphasized-text="Experience" section="other" :experiences="otherExperiences" />
     </div>
 </template>
 
-<style scoped>
+
+<style lang="scss" scoped>
+@import url('/assets/styles/utils.css');
 @import './experience.scss';
+
+/* Additional CSS */
+.experience-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .toggle-btn {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #000;
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.toggle-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
 </style>
