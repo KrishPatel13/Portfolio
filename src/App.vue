@@ -6,6 +6,7 @@ import Portfolio from './components/portfolio/Portfolio.vue';
 import Experience from './components/experience/Experience.vue';
 import Skills from './components/skills/Skill.vue';
 import Confetti from './components/Confetti.vue';
+import SplashScreen from './components/SplashScreen.vue';
 import AOS from 'aos';
 import { onMounted } from 'vue';
 
@@ -13,6 +14,7 @@ onMounted(() => AOS.init());
 </script>
 
 <template>
+  <SplashScreen />
     <Confetti>
       <NavBar />
       <div class="main-content">
