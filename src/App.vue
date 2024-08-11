@@ -14,23 +14,22 @@ onMounted(() => AOS.init());
 
 <template>
     <Confetti>
-        <NavBar />
-        <div class="main-content">
-            <router-view></router-view>
-            <div class="section">
-                <About />
-            </div>
-            <div class="section">
-                <Experience />
-            </div>
-            <div class="section">
-                <Portfolio />
-            </div>
-            <div class="section">
-                <Skills />
-            </div>
+      <NavBar />
+      <div class="main-content">
+        <div class="section" id="about">
+          <About />
         </div>
-        <Footer />
+        <div class="section" id="experience">
+          <Experience />
+        </div>
+        <div class="section" id="portfolio">
+          <Portfolio />
+        </div>
+        <div class="section" id="skills">
+          <Skills />
+        </div>
+      </div>
+      <Footer />
     </Confetti>
 </template>
 

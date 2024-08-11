@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import ExperienceSection from './ExperienceSection.vue';
 
 export type Experience = {
@@ -113,19 +112,6 @@ const otherExperiences: Experience[] = [
         ],
     },
 ];
-
-// // Toggle states
-// const showProfessional = ref(false);
-// const showTeaching = ref(false);
-// const showResearch = ref(false);
-// const showOther = ref(false);
-
-// const toggleVisibility = (section: 'professional' | 'teaching' | 'research' | 'other') => {
-// if (section === 'professional') showProfessional.value = !showProfessional.value;
-// if (section === 'teaching') showTeaching.value = !showTeaching.value;
-// if (section === 'research') showResearch.value = !showResearch.value;
-// if (section === 'other') showOther.value = !showOther.value;
-// };
 </script>
 
 

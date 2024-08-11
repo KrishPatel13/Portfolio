@@ -12,7 +12,9 @@ import Heading from './Heading.vue';
         />
 
         <div>
-            <Heading subtle-text="About" emphasized-text="Me" />
+            <div class="heading roboto light" data-aos="fade-right">
+                <Heading subtle-text="About" emphasized-text="Me" />
+            </div>
             <div class="description" data-aos="zoom-out-up">
                 I am Krish Patel, currently pursuing an <strong>Honours Bachelor of Science</strong> in <strong>Computer Science</strong> at the <strong>University of Toronto</strong>, with a strong academic focus complemented by practical experience.<br><br>
             </div>

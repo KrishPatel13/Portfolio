@@ -30,7 +30,7 @@ const toggleVisibility = () => {
 <template>
         <div class="experience-container heading roboto light" data-aos="fade-right">
                 <Heading :subtle-text="subtleText" :emphasized-text="emphasizedText" />
-                <button class="toggle-btn" @click="toggleVisibility(section)">
+                <button class="toggle-btn" @click="toggleVisibility()">
                         <svg class="toggle-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
                                 width="16">
                                 <path
