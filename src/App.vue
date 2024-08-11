@@ -43,6 +43,7 @@ body {
     font-size: 15px;
     margin: 0;
     cursor: url('/assets/cursor/custom-default-cursor.png'), auto;
+    background-color: #e7e5dd;
 }
 
 
@@ -57,6 +58,7 @@ body {
 
 
 .section {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
 }
 </style>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Heading from '../Heading.vue';
 import ExperienceSection from './ExperienceSection.vue';
 
 export type Experience = {
@@ -117,6 +118,8 @@ const otherExperiences: Experience[] = [
 
 <template>
     <div id="experience">
+        <Heading class="roboto light heading" subtle-text="My" emphasized-text="Experiences" />
+    
         <ExperienceSection subtle-text="Professional" emphasized-text="Experience" section="professional"
             :experiences="professionalExperiences" />
         <ExperienceSection subtle-text="Teaching" emphasized-text="Experience" section="teaching" :experiences="teachingExperiences" />
@@ -136,12 +139,6 @@ const otherExperiences: Experience[] = [
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-
-    h2 {
-        margin: 0;
-        font-size: 24px;
-        font-weight: bold;
-    }
 
     .toggle-btn {
         display: flex;

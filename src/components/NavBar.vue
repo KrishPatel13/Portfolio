@@ -188,7 +188,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     margin: 0 auto;
     transition: background-color 1s ease, backdrop-filter 1s ease;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #e7e5dd;
 
     &.scrolled {
         background-color: rgba(255, 255, 218, 0.8);
