@@ -34,6 +34,7 @@ I would like to express my gratitude to the following individuals who have great
     - Your insights into software design principles have enhanced my ability to create clean and efficient code.
     - The design patterns and practices learned in your course have been utilized in this portfolio project.
 - **[Richard Abrich](https://www.linkedin.com/in/richard-abrich)** (Founder and CTO @OpenAdapt.AI): I am grateful for the opportunity to work under you during my internship at MLDSAI, where I contributed to the @OpenAdapt.AI project. Your insights into software development, best practices, and project management have been invaluable, shaping the way I approach software engineering today.
+- Lastly, this website uses the design and template by https://github.com/tahmid-haque/portfolio.
 
 
 ## Project Goals
