@@ -1,9 +1,5 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import TeachingExperience from './components/experience/categories/TeachingExperience.vue';
-// import ResearchExperience from './components/experience/ResearchExperience.vue';
-// import ProfessionalExperience from './components/experience/ProfessionalExperience.vue';
-// import OtherExperience from './components/experience/OtherExperience.vue';
 import HomeLayout from './components/HomeLayout.vue';
 import NotFound from './components/NotFound.vue';
 import * as VueRouter from 'vue-router';
@@ -32,22 +28,6 @@ export const routes = [
             },
         ],
     },
-    {
-        path: '/experience/teaching',
-        component: TeachingExperience,
-    },
-    // {
-    //     path: '/experience/research',
-    //     component: ResearchExperience,
-    // },
-    // {
-    //     path: '/experience/professional',
-    //     component: ProfessionalExperience,
-    // },
-    // {
-    //     path: '/experience/other',
-    //     component: OtherExperience,
-    // },
     {
         path: '/:pathMatch(.*)*',
         component: NotFound,
