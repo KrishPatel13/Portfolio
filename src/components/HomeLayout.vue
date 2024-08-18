@@ -16,25 +16,24 @@ const route = useRoute();
 </script>
 
 <template>
-        <Confetti>
-                <NavBar />
-                <!-- <RouterView /> -->
-                <div class="main-content">
-                        <div class="section">
-                                <About />
-                        </div>
-                        <div class="section">
-                                <Experience />
-                        </div>
-                        <div class="section">
-                                <Portfolio />
-                        </div>
-                        <div class="section">
-                                <Skills />
-                        </div>
-                </div>
-                <Footer />
-        </Confetti>
+	<Confetti>
+		<NavBar />
+		<div class="main-content">
+			<div class="section" id="about">
+					<About />
+			</div>
+			<div class="section" id="experience">
+					<Experience />
+			</div>
+			<div class="section" id="portfolio">
+					<Portfolio />
+			</div>
+			<div class="section" id="skills">
+					<Skills />
+			</div>
+		</div>
+		<Footer />
+	</Confetti>
 </template>
 
 <style lang="scss">
@@ -50,15 +49,16 @@ body {
 }
 
 .main-content {
-        align-content: center;
-        padding: 0 20px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        max-width: 1080px;
+    align-content: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
 }
 
 .section {
-        margin-bottom: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
 }
 </style>
