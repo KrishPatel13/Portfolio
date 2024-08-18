@@ -1,6 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import HomeLayout from './components/HomeLayout.vue';
+import Blog from './components/Blog.vue';
+import BlogNavBar from './components/navbars/BlogNavBar.vue'; // Import the new BlogNavBar
 import NotFound from './components/NotFound.vue';
 import * as VueRouter from 'vue-router';
 import 'aos/dist/aos.css';
@@ -27,6 +29,13 @@ export const routes = [
                 component: () => import('./components/skills/Skill.vue'),
             },
         ],
+    },
+    {
+        path: '/blog',
+        components: {
+            default: Blog,
+            navbar: BlogNavBar // Use BlogNavBar for the /blog route
+        }
     },
     {
         path: '/:pathMatch(.*)*',

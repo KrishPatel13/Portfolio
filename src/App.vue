@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import AOS from 'aos';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
 
 onMounted(() => AOS.init());
 </script>
 
 <template>
+    <router-view name="navbar" v-if="route.path !== '/blog'" />
     <router-view />
     <div class="glass-overlay"></div>
 </template>

@@ -60,6 +60,8 @@ onMounted(() => {
 #footer {
     margin-top: 10px;
     margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
