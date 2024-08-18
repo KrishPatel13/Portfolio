@@ -1,28 +1,25 @@
 <template>
         <BlogNavBar />
         <div class="blog-container">
-                <h1>Welcome to My Blog</h1>
-                <div class="blog-card-container">
-                        <router-link v-for="(post, index) in posts" :key="index" :to="`/blog/post/${index + 1}`"
-                                class="blog-card">
-                                <h2>{{ post.title }}</h2>
-                                <p>{{ post.excerpt }}</p>
-                        </router-link>
-                </div>
+                <h1>My Blog</h1>
+                <ul>
+                        <li v-for="post in posts" :key="post.id">
+                                <router-link :to="'/blog/post/' + post.id">{{ post.title }}</router-link>
+                        </li>
+                </ul>
         </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import BlogNavBar from '../navbars/BlogNavBar.vue';
-
 const posts = [
-        { title: 'Post 1', excerpt: 'This is the first post.' },
-        { title: 'Post 2', excerpt: 'This is the second post.' },
-        // Add more posts as needed
+        { id: 1, title: "Post 1", path: "@/components/blogs/posts/post1.md" },
+        // { id: 2, title: "Post 2", path: "@/components/blogs/posts/post2.md" },
+        // Add more posts here
 ];
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .blog-container {
         padding: 2rem;
         max-width: 800px;
@@ -32,39 +29,18 @@ const posts = [
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.blog-card-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-}
-
-.blog-card {
-        padding: 1rem;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
-        color: inherit;
-}
-
-.blog-card:hover {
-        background-color: #f0f0f0;
-}
-
 h1 {
         font-family: 'Raleway', sans-serif;
         font-size: 2.5rem;
         margin-bottom: 1rem;
 }
 
-h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
+ul {
+        list-style: none;
+        padding: 0;
 }
 
-p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
+li {
+        margin: 1rem 0;
 }
 </style>

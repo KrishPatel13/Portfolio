@@ -7,6 +7,7 @@
     "canvas-confetti": "^1.9.3",
     "cssnano": "^7.0.5",
     "framer-motion": "^11.2.12",
+    "markdown-it": "^14.1.0",
     "pdf-viewer-vue": "^0.2.7",
     "pdfjs-dist": "^4.5.136",
     "postcss": "^8.4.41",
@@ -17,6 +18,7 @@
     "vue-pdf": "^4.3.0",
     "vue-pdf-embed": "^2.1.0",
     "vue-router": "^4.4.3",
+    "vue3-markdown-it": "^1.0.10",
     "vue3-pdf-app": "^1.0.3"
   },
   "scripts": {
@@ -63,6 +65,7 @@
     "typescript": "^5.5.4",
     "vite": "^2.9.5",
     "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-markdown": "^2.2.0",
     "vite-plugin-purgecss": "^0.2.12",
     "vite-plugin-replace": "^0.1.1",
     "vue-tsc": "^2.0.29"

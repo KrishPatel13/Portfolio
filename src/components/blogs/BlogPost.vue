@@ -1,26 +1,45 @@
 <template>
-        <div class="blog-post-container">
-                <router-link to="/blog">← Back to Blogs</router-link>
-                <div v-html="postContent"></div>
+        <BlogNavBar />
+        <div class="post-container">
+                <h1>{{ attributes.title }}</h1>
+                <h2>{{ attributes.date }}</h2>
+
+                <h3>Table of Contents</h3>
+                <ul>
+                        <li v-for="item in toc" :key="item.slug">
+                                <a :href="'#' + item.slug">{{ item.content }}</a>
+                        </li>
+                </ul>
+
+                <div v-html="html"></div>
+
+                <h3>Vue Components within Markdown</h3>
+                <ContentMarkdown />
         </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+<script>
+import BlogNavBar from '../navbars/BlogNavBar.vue';
+import { attributes, html, toc, VueComponent, VueComponentWith } from '@/components/blogs/posts/post1.md';
 
-const postContent = ref<string | null>(null);
-const route = useRoute();
-
-onMounted(async () => {
-        const postId = route.params.id;
-        const postModule = await import(`./posts/post${postId}.md`);
-        postContent.value = postModule.default;
-});
+export default {
+        name: 'BlogPost',
+        components: {
+                BlogNavBar,
+                ContentMarkdown: VueComponentWith({}),
+        },
+        data() {
+                return {
+                        attributes,
+                        html,
+                        toc,
+                };
+        },
+};
 </script>
 
-<style scoped lang="scss">
-.blog-post-container {
+<style scoped>
+.post-container {
         padding: 2rem;
         max-width: 800px;
         margin: 0 auto;
@@ -29,15 +48,10 @@ onMounted(async () => {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1,
+h2,
+h3 {
         font-family: 'Raleway', sans-serif;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-}
-
-p {
-        font-size: 1.2rem;
-        line-height: 1.6;
         margin-bottom: 1rem;
 }
 </style>

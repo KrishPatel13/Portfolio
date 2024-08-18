@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import HomeLayout from './components/HomeLayout.vue';
 import Blog from './components/blogs/Blog.vue';
+import BlogPost from './components/blogs/BlogPost.vue';
 import BlogNavBar from './components/navbars/BlogNavBar.vue'; 
 import NotFound from './components/NotFound.vue';
 import * as VueRouter from 'vue-router';
@@ -32,10 +33,11 @@ export const routes = [
     },
     {
         path: '/blog',
-        components: {
-            default: Blog,
-            nav: BlogNavBar,
-        }
+        component: Blog,
+    },
+    {
+        path: '/blog/post/:id',
+        component: BlogPost,
     },
     {
         path: '/:pathMatch(.*)*',
