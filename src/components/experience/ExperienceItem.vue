@@ -33,10 +33,7 @@ onMounted(() => {
         <div class="timeline-content" :data-aos="fadeSelector">
             <div class="header">
                 <div class="logo">
-                    <img
-                        :src="`/assets/images/logos/${experience.logo}`"
-                        alt="Experience logo"
-                    />
+                    <img :src="`/assets/images/logos/${experience.logo}`" alt="Experience logo" loading="lazy" />
                 </div>
                 <div class="position-info">
                     <div class="company">{{ experience.organization }}</div>

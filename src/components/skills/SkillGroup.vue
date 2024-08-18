@@ -23,6 +23,7 @@ const skills = computed(() => {
 .group-name {
     font-size: 18px;
     margin-bottom: 5px;
+    cursor: text;
 }
 
 .item {

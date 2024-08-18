@@ -18,11 +18,13 @@ const options: Section[] = [
 const active = ref(options[0]);
 const scrolled = ref(false);
 const navbar = ref(null);
+
 const updateElements = () => {
     for (const option of options) {
         option.element = document.getElementById(option.selectorId);
     }
 };
+
 const updateLocations = () => {
     const navHeight = (navbar as any).value.offsetHeight + 5;
     for (const option of options) {
@@ -32,6 +34,7 @@ const updateLocations = () => {
             navHeight;
     }
 };
+
 const onNavClick = (option: Section) => {
     window.scrollTo({ top: option.location, behavior: 'smooth' });
 };
@@ -43,6 +46,20 @@ const onScroll = () => {
             break;
         }
     }
+};
+
+const onScroll = () => {
+    scrolled.value = window.scrollY > 0;
+    for (let i = options.length - 1; i >= 0; i--) {
+        if (window.scrollY >= options[i].location! - 1) {
+            active.value = options[i];
+            break;
+        }
+    }
+};
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 onMounted(() => {
@@ -67,16 +84,12 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
 <template>
     <div id="navbar" :class="{ scrolled }" ref="navbar">
         <div class="container">
-            <div id="name" class="roboto light">
+            <div id="name" class="roboto light hover-enabled" @click="scrollToTop">
                 Krish<span class="bold">Patel</span>
             </div>
             <div id="options">
-                <div
-                    v-for="(option, idx) in options"
-                    :class="{ active: option.name === active.name }"
-                    @click="onNavClick(option)"
-                    :key="idx"
-                >
+                <div v-for="(option, idx) in options" :class="{ active: option.name === active.name }"
+                    @click="onNavClick(option)" :key="idx">
                     {{ option.name }}
                 </div>
             </div>
@@ -95,8 +108,18 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     user-select: none;
 
     #name {
-        font-size: 28px;
+        margin-left: 50px;
+        font-size: 32px;
         font-weight: 300;
+        cursor: home;
+
+        &:hover{
+            transform: scale(1.2);
+            transition: all ease 500ms;
+            box-shadow: 0 0 5px #000;
+            border: none;
+            cursor: url('/assets/cursor/go-to-top.png'), auto;
+        }
 
         #lastName {
             font-weight: 800;
@@ -110,7 +133,8 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
             @media (min-width: 400px) {
                 font-size: 18px;
             }
-            padding: 0 10px;
+            margin: 0px 8px;
+            padding: 0 2px;
             height: 45px;
             flex-direction: column;
             justify-content: space-between;
@@ -129,7 +153,12 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
                 width: 0;
             }
 
-            &:hover,
+            &:hover {
+                transform: scale(1.1);
+                transition: all ease 500ms;
+                box-shadow: 0 0 5px #000;
+                cursor: pointer;
+            }
             &.active {
                 &:before,
                 &:after {
@@ -166,16 +195,24 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    transition: background-color 1s ease, backdrop-filter 1s ease; /* Transition for background and blur */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glass effect with blur */
+    transition: background-color 1s ease, backdrop-filter 1s ease;
+    backdrop-filter: blur(10px);
+    background-color: #e7e5dd;
+
+    &.scrolled {
+        background-color: rgba(255, 255, 218, 0.8);
+            &:after {
+                box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
+                width: 100vw;
+            }
+        }
 
     &:after {
         content: '';
         position: relative;
-        transition: box-shadow 1s ease;
+        transition: all 2000ms ease-in-out;
         width: 0;
-        box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -186,7 +223,7 @@ onUnmounted(() => document.removeEventListener('scroll', onScroll));
         margin: 0 auto;
     }
     100% {
-        width: 100vw; /* Expand to full viewport width */
+        width: 100vw;
         max-width: none;
         margin: 0;
     }

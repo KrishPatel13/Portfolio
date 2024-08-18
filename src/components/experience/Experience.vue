@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import Heading from '../Heading.vue';
-import ExperienceGroup from './ExperienceGroup.vue';
+import ExperienceSection from './ExperienceSection.vue';
 
 export type Experience = {
     logo: string;
@@ -114,79 +113,51 @@ const otherExperiences: Experience[] = [
         ],
     },
 ];
-
-// // Computes timeline shape using position deltas across experience items and bullets
-// const arrangeTimeline = () => {
-//     const ITEM_OFFSET = 20;
-//     const expComponents = document.querySelectorAll(
-//         '.timeline-item'
-//     ) as any as HTMLElement[];
-//     const isDisabled =
-//         (window.innerWidth ||
-//             document.documentElement.clientWidth ||
-//             document.body.clientWidth) <= 716;
-//     for (let i = 1; i < expComponents.length; i++) {
-//         expComponents[i].style.marginTop = 'unset';
-//         if (isDisabled) continue;
-
-//         let directUpperExpPos = -Infinity;
-//         let lowerDelta = Infinity;
-
-//         // get upper circle position
-//         const directUpperBulletRect =
-//             expComponents[i - 1].children[0].getBoundingClientRect();
-//         const directUpperBulletPos =
-//             directUpperBulletRect.top + directUpperBulletRect.height;
-
-//         // get upper box position
-//         if (i > 1) {
-//             const directUpperExpRect =
-//                 expComponents[i - 2].getBoundingClientRect();
-//             directUpperExpPos =
-//                 directUpperExpRect.top + directUpperExpRect.height;
-//         }
-
-//         // get upper delta
-//         const currentExpPos = expComponents[i].getBoundingClientRect().top;
-//         const upperDelta =
-//             currentExpPos - Math.max(directUpperBulletPos, directUpperExpPos);
-
-//         // get lower delta
-//         const adjUpperExpRect = expComponents[i - 1].getBoundingClientRect();
-//         const adjUpperExpPos = adjUpperExpRect.top + adjUpperExpRect.height;
-//         const lowerItem =
-//             i < expComponents.length - 1
-//                 ? expComponents[i + 1]
-//                 : document.getElementById('portfolio');
-//         lowerDelta = lowerItem!.getBoundingClientRect().top - adjUpperExpPos;
-
-//         const finalDelta = -Math.min(upperDelta, lowerDelta) + ITEM_OFFSET;
-
-//         expComponents[i].style.marginTop = `${finalDelta}px`;
-//     }
-// };
-// onMounted(() => {
-//     arrangeTimeline();
-//     window.addEventListener('resize', arrangeTimeline);
-// });
 </script>
+
 
 <template>
     <div id="experience">
-        <Heading subtle-text="Professional" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="professionalExperiences" />
-
-        <Heading subtle-text="Teaching" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="teachingExperiences" />
-
-        <Heading subtle-text="Research" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="researchExperiences" />
-
-        <Heading subtle-text="Other" emphasized-text="Experience" />
-        <ExperienceGroup :experiences="otherExperiences" />
+        <Heading class="roboto light heading" subtle-text="My" emphasized-text="Experiences" />
+    
+        <ExperienceSection subtle-text="Professional" emphasized-text="Experience" section="professional"
+            :experiences="professionalExperiences" />
+        <ExperienceSection subtle-text="Teaching" emphasized-text="Experience" section="teaching" :experiences="teachingExperiences" />
+        <ExperienceSection subtle-text="Research" emphasized-text="Experience" section="research" :experiences="researchExperiences" />
+        <ExperienceSection subtle-text="Other" emphasized-text="Experience" section="other" :experiences="otherExperiences" />
     </div>
 </template>
 
-<style scoped>
+
+<style lang="scss" scoped>
+@import url('/assets/styles/utils.css');
 @import './experience.scss';
+
+/* Additional CSS */
+.experience-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .toggle-btn {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #000;
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.toggle-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
 </style>

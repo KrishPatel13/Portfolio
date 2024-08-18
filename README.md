@@ -34,6 +34,7 @@ I would like to express my gratitude to the following individuals who have great
     - Your insights into software design principles have enhanced my ability to create clean and efficient code.
     - The design patterns and practices learned in your course have been utilized in this portfolio project.
 - **[Richard Abrich](https://www.linkedin.com/in/richard-abrich)** (Founder and CTO @OpenAdapt.AI): I am grateful for the opportunity to work under you during my internship at MLDSAI, where I contributed to the @OpenAdapt.AI project. Your insights into software development, best practices, and project management have been invaluable, shaping the way I approach software engineering today.
+- Lastly, this website uses the design and template by https://github.com/tahmid-haque/portfolio.
 
 
 ## Project Goals
@@ -42,6 +43,7 @@ This portfolio is an ongoing project aimed at not only showcasing my past work b
 
 - **Enhancing User Interface (UI):** Continuously improving the design to align with modern standards.
 - **SEO Optimization:** Implementing strategies to increase visibility in search engine results.
+![image](https://github.com/user-attachments/assets/848c44bd-06c6-4b4d-8c2f-ad0c0028c4ea)
 - **Responsive Design:** Ensuring a consistent experience across all devices.
 - **Performance Optimization:** Regularly improving loading times and overall performance.
 - **Adhering to Software Engineering Practices:** Following the Software Development Life Cycle (SDLC) and applying Software Product Management principles for high-quality delivery.

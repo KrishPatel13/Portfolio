@@ -136,13 +136,12 @@ const skillData: SkillGroupData[] = [
 
 <template>
     <div id="skills">
-        <Heading subtle-text="My" emphasized-text="Skills" />
+        <div class="heading roboto light" data-aos="fade-right">
+            <Heading subtle-text="My" emphasized-text="Skills" />
+        </div>
         <div id="skillGroups">
-            <SkillGroup
-                v-for="skillGroup of skillData"
-                class="group"
-                :skill-group="skillGroup"
-            />
+            <SkillGroup v-for="skillGroup of skillData" :key="skillGroup.title" class="group"
+                :skill-group="skillGroup" />
         </div>
     </div>
 </template>

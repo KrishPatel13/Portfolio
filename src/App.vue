@@ -20,6 +20,23 @@ body {
     font-weight: 500;
     font-size: 15px;
     margin: 0;
-    cursor: url('/assets/cursor/cursor7.png'), auto;
+    cursor: url('/assets/cursor/custom-default-cursor.png'), auto;
+    background-color: #e7e5dd;
+}
+
+
+.main-content {
+    align-content: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+}
+
+
+.section {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
 }
 </style>

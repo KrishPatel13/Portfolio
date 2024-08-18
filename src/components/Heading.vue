@@ -3,7 +3,7 @@ const props = defineProps<{ subtleText: string; emphasizedText: string }>();
 </script>
 
 <template>
-    <div class="heading roboto light" data-aos="fade-right">
+    <div class="roboto light" data-aos="fade-right">
         {{ props.subtleText
         }}<span class="bold">{{ props.emphasizedText }}</span>
     </div>
@@ -11,4 +11,8 @@ const props = defineProps<{ subtleText: string; emphasizedText: string }>();
 
 <style lang="scss" scoped>
 @import url('/assets/styles/utils.css');
+
+.heading {
+    cursor: text;
+}
 </style>

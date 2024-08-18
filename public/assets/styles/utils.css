@@ -16,6 +16,7 @@
     padding-bottom: 5px;
     width: 100%;
     border-bottom: 1px solid rgba(191, 191, 191, 0.4);
+    cursor: text;
 }
 
 .glass-overlay {
