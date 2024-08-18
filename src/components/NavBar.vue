@@ -26,10 +26,10 @@ const updateElements = () => {
 };
 
 const updateLocations = () => {
-    const navHeight = (navbar as any).value.offsetHeight + 5;
+    const navHeight = (navbar.value as HTMLElement).offsetHeight + 5;
     for (const option of options) {
         option.location =
-            option.element!.getBoundingClientRect().top +
+            option.element?.getBoundingClientRect().top +
             window.scrollY -
             navHeight;
     }
@@ -38,20 +38,11 @@ const updateLocations = () => {
 const onNavClick = (option: Section) => {
     window.scrollTo({ top: option.location, behavior: 'smooth' });
 };
-const onScroll = () => {
-    scrolled.value = window.scrollY > 0;
-    for (let i = options.length - 1; i >= 0; i--) {
-        if (window.scrollY >= options[i].location! - 1) {
-            active.value = options[i];
-            break;
-        }
-    }
-};
 
 const onScroll = () => {
     scrolled.value = window.scrollY > 0;
     for (let i = options.length - 1; i >= 0; i--) {
-        if (window.scrollY >= options[i].location! - 1) {
+        if (window.scrollY >= options[i]?.location - 1) {
             active.value = options[i];
             break;
         }

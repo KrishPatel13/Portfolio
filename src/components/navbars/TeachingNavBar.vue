@@ -27,7 +27,7 @@ const updateLocations = () => {
         const navHeight = (navbar as any).value.offsetHeight + 5;
         for (const option of options) {
                 option.location =
-                        option.element!.getBoundingClientRect().top +
+                        option.element?.getBoundingClientRect()?.top +
                         window.scrollY -
                         navHeight;
         }
@@ -38,7 +38,7 @@ const onNavClick = (option: Section) => {
 const onScroll = () => {
         scrolled.value = window.scrollY > 0;
         for (let i = options.length - 1; i >= 0; i--) {
-                if (window.scrollY >= options[i].location! - 1) {
+                if (window.scrollY >= options[i]?.location - 1) {
                         active.value = options[i];
                         break;
                 }

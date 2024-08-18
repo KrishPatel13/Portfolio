@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
 import NavBar from './NavBar.vue';
 import Footer from './Footer.vue';
 import About from './About.vue';
@@ -12,7 +11,6 @@ import { onMounted } from 'vue';
 
 onMounted(() => AOS.init());
 
-const route = useRoute();
 </script>
 
 <template>
@@ -45,7 +43,6 @@ body {
         font-weight: 500;
         font-size: 15px;
         margin: 0;
-        cursor: url('/assets/cursor/cursor7.png'), auto;
 }
 
 .main-content {
